@@ -1,0 +1,2 @@
+1. 순차탐색(sepuential search) : 첫 번째 원소부터 시작하여 한 원소씩 차레대로 다음 원소 탐색
+2. 이분탐색(binary search) : middle, left, right

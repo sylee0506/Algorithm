@@ -16,10 +16,10 @@
 
 int main(void)
 {
-	int a[10];
+	int a[10]; //배열 선언은 전역이 좋다. 크기도 더 크고 자동으로 0으로 초기화해줌 / 10같이 입력 제한 범위 등 고정값은 #define 이용
 	int i, temp, index;
 
-	for (i = 0; i < 9; i++)
+	for (i = 0; i < 9; i++) //for 내부에서 i 변수를 선언하는 것도 오류를 줄이는 좋은 팁 but 각자 코딩스타일
 	{
 		scanf("%d", &a[i]);
 	}
@@ -31,9 +31,9 @@ int main(void)
 		if (temp <= a[i])
 		{
 			temp = a[i];
-			index = i;
+			index = i; //최대값을 받을 temp를 따로 선언하지 말고 if(A[ans]<A[i]) ans=i;로 한번에 해결 good
 		}
 	}
 
 	printf("%d\n%d\n", temp, index+1);
-}
+} //작은 과정이어도 함수로 빼내어 짜는게 good; 큰 프로그래에서 디버깅에 유용

@@ -37,7 +37,7 @@ void solve(int num)
 
 void main(void)
 {
-	int num;
+	int num; //입력받을 수 num을 전역으로 두는게 나중에 범위 더 큰 수 받을 수 있음 but 각자 코딩 스타일
 	scanf("%d", &num);
 	solve(num);
 }
