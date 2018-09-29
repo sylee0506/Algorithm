@@ -1,13 +1,13 @@
 /*
-n°³·Î ÀÌ·ç¾îÁø Á¤¼ö ÁýÇÕ¿¡¼­ ¿øÇÏ´Â ¼öÀÇ À§Ä¡¸¦ Ã£À¸½Ã¿À.
-´Ü, ÀÔ·ÂµÇ´Â ÁýÇÕÀº ¿À¸§Â÷¼øÀ¸·Î Á¤·ÄµÇ¾î ÀÖÀ¸¸ç, °°Àº ¼ö´Â ¾ø´Ù.
-ÀÔ·Â
-Ã¹ ÁÙ¿¡ ÇÑ Á¤¼ö nÀÌ ÀÔ·ÂµÈ´Ù.
-µÑÂ° ÁÙ¿¡ n°³ÀÇ Á¤¼ö°¡ °ø¹éÀ¸·Î ±¸ºÐµÇ¾î ÀÔ·ÂµÈ´Ù.
-¼ÂÂ° ÁÙ¿¡´Â Ã£°íÀÚ ÇÏ´Â ¼ö°¡ ÀÔ·ÂµÈ´Ù.
-(´Ü, 2 <= n <= 1,000,000 , °¢ ¿ø¼ÒÀÇ Å©±â´Â 100,000,000À» ³ÑÁö ¾Ê´Â´Ù.)
-Ãâ·Â
-Ã£°íÀÚ ÇÏ´Â ¿ø¼ÒÀÇ À§Ä¡¸¦ Ãâ·ÂÇÑ´Ù. ¾øÀ¸¸é -1À» Ãâ·ÂÇÑ´Ù.
+nê°œë¡œ ì´ë£¨ì–´ì§„ ì •ìˆ˜ ì§‘í•©ì—ì„œ ì›í•˜ëŠ” ìˆ˜ì˜ ìœ„ì¹˜ë¥¼ ì°¾ìœ¼ì‹œì˜¤.
+ë‹¨, ìž…ë ¥ë˜ëŠ” ì§‘í•©ì€ ì˜¤ë¦„ì°¨ìˆœìœ¼ë¡œ ì •ë ¬ë˜ì–´ ìžˆìœ¼ë©°, ê°™ì€ ìˆ˜ëŠ” ì—†ë‹¤.
+ìž…ë ¥
+ì²« ì¤„ì— í•œ ì •ìˆ˜ nì´ ìž…ë ¥ëœë‹¤.
+ë‘˜ì§¸ ì¤„ì— nê°œì˜ ì •ìˆ˜ê°€ ê³µë°±ìœ¼ë¡œ êµ¬ë¶„ë˜ì–´ ìž…ë ¥ëœë‹¤.
+ì…‹ì§¸ ì¤„ì—ëŠ” ì°¾ê³ ìž í•˜ëŠ” ìˆ˜ê°€ ìž…ë ¥ëœë‹¤.
+(ë‹¨, 2 <= n <= 1,000,000 , ê° ì›ì†Œì˜ í¬ê¸°ëŠ” 100,000,000ì„ ë„˜ì§€ ì•ŠëŠ”ë‹¤.)
+ì¶œë ¥
+ì°¾ê³ ìž í•˜ëŠ” ì›ì†Œì˜ ìœ„ì¹˜ë¥¼ ì¶œë ¥í•œë‹¤. ì—†ìœ¼ë©´ -1ì„ ì¶œë ¥í•œë‹¤.
 */
 
 #define _CRT_SECURE_NO_WARNINGS
@@ -15,7 +15,7 @@ n°³·Î ÀÌ·ç¾îÁø Á¤¼ö ÁýÇÕ¿¡¼­ ¿øÇÏ´Â ¼öÀÇ À§Ä¡¸¦ Ã£À¸½Ã¿À.
 
 int n, num;
 int A[1000001];
-//numÀº Àü¿ªÀ¸·Î ¾²´Â°Ô ÁÁ´Ù. ±×·¡¾ß ³Ñ°ÜÁÖÁö ¾Ê¾Æµµ µÇ´Ï±î.
+//numì€ ì „ì—­ìœ¼ë¡œ ì“°ëŠ”ê²Œ ì¢‹ë‹¤. ê·¸ëž˜ì•¼ ë„˜ê²¨ì£¼ì§€ ì•Šì•„ë„ ë˜ë‹ˆê¹Œ.
 
 void find_seq(int n, int num)
 {
@@ -43,11 +43,11 @@ void find_bin(int left, int right, int num)
 	{
 		printf("bin, -1\n");
 		return;
-	}//base Ã³¸®ÀÎµ¥ ÀÌ°Íº¸´Ù´Â if(left>right) return;ÀÌ ±ò²û
+	}//base ì²˜ë¦¬ì¸ë° ì´ê²ƒë³´ë‹¤ëŠ” if(left>right) return;ì´ ê¹”ë” //ì¶”ê°€ ; if(left>=right) ì´ì–´ì•¼ í•œë‹¤.
 
 	if (A[middle] == num)
 	{
-		printf("bin, %d\n", middle+1);//print ¹Ù·Î ÇÏÁö¸»°í middle+1 °ªÀ» ¸®ÅÏÇÏ´Â ÂÊÀ¸·Î ÇÏ¸é À§¿¡ base¿¡¼­µµ -1 ¸®ÅÏÇÏ¸é µÈ´Ù. void¿¡¼­ return;Àº ºÒ¾ÈÁ¤
+		printf("bin, %d\n", middle+1);//print ë°”ë¡œ í•˜ì§€ë§ê³  middle+1 ê°’ì„ ë¦¬í„´í•˜ëŠ” ìª½ìœ¼ë¡œ í•˜ë©´ ìœ„ì— baseì—ì„œë„ -1 ë¦¬í„´í•˜ë©´ ëœë‹¤. voidì—ì„œ return;ì€ ë¶ˆì•ˆì •
 		return;
 	}
 	else if (A[middle] > num)
