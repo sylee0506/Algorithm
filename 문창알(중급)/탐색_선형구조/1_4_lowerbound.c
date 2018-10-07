@@ -51,7 +51,7 @@ void find_binary(int left, int right, int k)
 	if (k > a[middle])
 		find_binary(middle + 1, right, k);
 	else if (k <= a[middle])//배열에 같은 수가 있을 수 있으므로 등호 필요. 하한선이므로 여기에 넣었음.
-		find_binary(left, middle, k); //하한선이므로 k가 더 작을 때는 middle 값을 포함하여 다시 탐색해야한다.
+		find_binary(left, middle, k);
 }
 
 void main(void)
